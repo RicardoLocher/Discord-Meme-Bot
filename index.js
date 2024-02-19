@@ -39,7 +39,7 @@ client.on('messageCreate', async(message) => {
                     break;
                 
                 case '!help':
-                    message.reply('Commands: \n !meme \n !codememe \n !github \n or click here for a full list of commands: ');
+                    message.reply('Commands: \n !meme \n !codememe \n !github \n or click here for a full list of commands: \n https://github.com/RicardoLocher/Discord-Meme-Bot/blob/main/README.md');
                     break;
             }
         }
