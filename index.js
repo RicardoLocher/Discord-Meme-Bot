@@ -39,7 +39,18 @@ client.on('messageCreate', async(message) => {
                     break;
                 
                 case '!help':
-                    message.reply('Commands: \n !meme \n !codememe \n !github \n or click here for a full list of commands: \n https://github.com/RicardoLocher/Discord-Meme-Bot/blob/main/README.md');
+                    message.reply('Commands: \n !meme \n !codememe \n !joke \n !github \n or click here for a full list of commands: \n https://github.com/RicardoLocher/Discord-Meme-Bot/blob/main/README.md');
+                    break;
+
+                case '!joke':
+                    let data4 = await fetch("https://v2.jokeapi.dev/joke/Dark?blacklistFlags=religious,political,explicit").then(response => response.json());
+                    if(data4.type === 'single'){
+                        message.channel.send(data4.joke);
+                    }
+                    else{
+                        message.channel.send(data4.setup);
+                        message.channel.send(data4.delivery);
+                    }
                     break;
             }
         }
