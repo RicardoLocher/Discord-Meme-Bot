@@ -33,6 +33,9 @@ client.on('messageCreate', async(message) => {
                     let data2 = await fetch("https://meme-api.com/gimme/ProgrammerHumor").then(response => response.json());
                     message.channel.send(data2.url);
                     break;
+
+                case '!github':
+                    message.reply('My source code is at: https://github.com/RicardoLocher/Discord-Meme-Bot')
             }
         }
 
