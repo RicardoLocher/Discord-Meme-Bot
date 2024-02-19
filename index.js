@@ -36,6 +36,11 @@ client.on('messageCreate', async(message) => {
 
                 case '!github':
                     message.reply('My source code is at: https://github.com/RicardoLocher/Discord-Meme-Bot')
+                    break;
+                
+                case '!help':
+                    message.reply('Commands: \n !meme \n !codememe \n !github \n or click here for a full list of commands: ');
+                    break;
             }
         }
 
